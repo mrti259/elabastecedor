@@ -77,9 +77,9 @@ def export_products(filename, products):
 def main():
     start_time = datetime.now()
     date = f"{start_time:%Y%m%d}"
-    cookie, urls = get_routes(f"{date}_routes.json")
+    cookie, urls = get_routes(f"data/{date}_routes.json")
     products = get_products(cookie, urls)
-    export_products(f"{date}_products.csv", products)
+    export_products(f"data/{date}_products.csv", products)
 
 if __name__ == "__main__":
     main()
