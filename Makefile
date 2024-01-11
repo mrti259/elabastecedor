@@ -4,5 +4,7 @@ install:
 notebook:
 	poetry run jupyter notebook --no-browser
 
-main:
+run:
 	poetry run python main.py
+
+all: install run
